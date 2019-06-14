@@ -12,4 +12,5 @@ E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\Facebook.xml
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.csproj.CopyComplete
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.exe
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.pdb
-E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.crtInputDSBanbe.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.frmSignleResult.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usDSBanBe_Input.resources

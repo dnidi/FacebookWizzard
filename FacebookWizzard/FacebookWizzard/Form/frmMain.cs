@@ -3,29 +3,50 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Facebook;
 
 namespace FacebookWizzard.Form
 {
     public partial class frmMain : System.Windows.Forms.Form
     {
+        public string Token { get { return txtToken.Text; } set { txtToken.Text = value; } }
         public frmMain()
         {
             InitializeComponent();
             //LoadUrls("facebook.com,google.com".Split(',').ToList());
+            txtToken.Text = "EAAAAUaZA8jlABAMqMjN52l8HrP2ZAuBoHT61gA3EAQHGDuJVQaUgy7t8FxQareIRSr4NyTGA9zSZBWWscZArxFEdoH4TTFIJpC7bwBbiqZB1qdLhkiLzJLVsJazfpMSKiAASOOwNGQJEL66ahratPwwuipZCQmcNmU9TlHNW5CgAZDZD";
             LoadComboChucNang();
             InitEvents();
         }
+        //EAAAAUaZA8jlABAMqMjN52l8HrP2ZAuBoHT61gA3EAQHGDuJVQaUgy7t8FxQareIRSr4NyTGA9zSZBWWscZArxFEdoH4TTFIJpC7bwBbiqZB1qdLhkiLzJLVsJazfpMSKiAASOOwNGQJEL66ahratPwwuipZCQmcNmU9TlHNW5CgAZDZD
         //====================Event=======================
         void InitEvents()
         {
             cbChucNang.SelectedIndexChanged += (o, e) =>
             {
-                int index = cbChucNang.SelectedIndex;
-                switch (index)
+                try
                 {
-                    case 1:
-                        break;
-                        
+                    int index = cbChucNang.SelectedIndex;
+                    object Result = null;
+                    switch (index)
+                    {
+                        case 1:
+                           
+                            var request = "https://graph.facebook.com/fql?q=SELECT+uid,+name,+friend_count,+subscriber_count+FROM+user+WHERE+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1+=+me())++ORDER+BY+rand()+LIMIT+5000&access_token=" + Token;
+                            //Result = fb.Get(request.Replace("+", "%20").Replace("\r\n",""));
+
+                            
+                            FacebookClient fc = new FacebookClient(Token);
+                            fc.GetTaskAsync()
+                           // string retrievedAppID = resultContainer["id"] as string;
+
+
+                            break;
+
+                    }
+                }
+                catch (Exception ex)
+                {
                 }
 
             };

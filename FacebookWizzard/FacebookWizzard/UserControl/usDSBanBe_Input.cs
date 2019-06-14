@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FacebookWizzard.UserControl
 {
-    public partial class crtInputDSBanbe : System.Windows.Forms. UserControl
+    public partial class usDSBanBe_Input : System.Windows.Forms.Form
     {
-        public crtInputDSBanbe()
+        public usDSBanBe_Input()
         {
             InitializeComponent();
         }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtToken = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbChucNang = new System.Windows.Forms.ComboBox();
             this.pnTop = new System.Windows.Forms.Panel();
@@ -48,12 +48,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Facebook Token";
             // 
-            // textBox1
+            // txtToken
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(752, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtToken.Location = new System.Drawing.Point(130, 13);
+            this.txtToken.Name = "txtToken";
+            this.txtToken.Size = new System.Drawing.Size(752, 20);
+            this.txtToken.TabIndex = 1;
             // 
             // label2
             // 
@@ -76,7 +76,7 @@
             // 
             this.pnTop.Controls.Add(this.label1);
             this.pnTop.Controls.Add(this.cbChucNang);
-            this.pnTop.Controls.Add(this.textBox1);
+            this.pnTop.Controls.Add(this.txtToken);
             this.pnTop.Controls.Add(this.label2);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
@@ -122,7 +122,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtToken;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbChucNang;
         private System.Windows.Forms.Panel pnTop;

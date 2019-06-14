@@ -50,8 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\CefSharp.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook">
-      <HintPath>..\packages\Facebook.7.0.6\lib\net40-client\Facebook.dll</HintPath>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,17 +74,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl\crtInputDSBanbe.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\crtInputDSBanbe.Designer.cs">
-      <DependentUpon>crtInputDSBanbe.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\ctrEmbedBrowser.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\ctrEmbedBrowser.Designer.cs">
       <DependentUpon>ctrEmbedBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\frmSignleResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmSignleResult.Designer.cs">
+      <DependentUpon>frmSignleResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\usDSBanBe_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\usDSBanBe_Input.Designer.cs">
+      <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\Common.cs" />
     <EmbeddedResource Include="Form\frmMain.resx">
@@ -99,11 +106,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControl\crtInputDSBanbe.resx">
-      <DependentUpon>crtInputDSBanbe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ctrEmbedBrowser.resx">
       <DependentUpon>ctrEmbedBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmSignleResult.resx">
+      <DependentUpon>frmSignleResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\usDSBanBe_Input.resx">
+      <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
