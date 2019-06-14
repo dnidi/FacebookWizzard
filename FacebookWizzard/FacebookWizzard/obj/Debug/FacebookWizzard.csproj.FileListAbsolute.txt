@@ -1,0 +1,15 @@
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.csprojAssemblyReference.cache
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.Form.frmMain.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.Properties.Resources.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.ctrEmbedBrowser.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.csproj.GenerateResource.cache
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.csproj.CoreCompileInputs.cache
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\FacebookWizzard.exe.config
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\FacebookWizzard.exe
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\FacebookWizzard.pdb
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\Facebook.dll
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\Facebook.xml
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.csproj.CopyComplete
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.exe
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.pdb
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.crtInputDSBanbe.resources
