@@ -1,0 +1,2 @@
+[0624/205530:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 3
+[0624/205857:WARNING:spdy_session.cc(2599)] Received WINDOW_UPDATE for invalid stream 25

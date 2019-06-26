@@ -86,6 +86,7 @@
     <Compile Include="Form\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="JSONResponse\Response_PostDetail.cs" />
     <Compile Include="JSONResponse\Response_Posts.cs" />
     <Compile Include="JSONResponse\Response_JoinedGroups.cs" />
     <Compile Include="Program.cs" />
@@ -107,6 +108,12 @@
     </Compile>
     <Compile Include="UserControl\usDSBanBe_Input.Designer.cs">
       <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\usPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\usPost.Designer.cs">
+      <DependentUpon>usPost.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\Common.cs" />
     <EmbeddedResource Include="Form\frmMain.resx">
@@ -132,6 +139,9 @@
     <EmbeddedResource Include="UserControl\usDSBanBe_Input.resx">
       <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\usPost.resx">
+      <DependentUpon>usPost.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,6 +158,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Util\feedReturn.txt" />
+    <Content Include="Util\postReturn.txt" />
+    <Content Include="Util\groupReturn.txt" />
     <Content Include="Util\AIP thường dùng.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

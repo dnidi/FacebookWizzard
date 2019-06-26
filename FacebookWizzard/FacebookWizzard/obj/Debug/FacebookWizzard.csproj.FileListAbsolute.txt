@@ -95,3 +95,4 @@ E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\es\DevExpres
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.exe.licenses
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usPost.resources

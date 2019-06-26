@@ -10,6 +10,7 @@ namespace FacebookWizzard.JSONResponse
     {
         public string created_time { get; set; }
         public string message { get; set; }
+        public string story { get; set; }
         public List<actionResponse_PostDetail> actions { get; set; }
 
     }

@@ -9,6 +9,7 @@ using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using FacebookWizzard.JSONResponse;
+using System.Net;
 
 namespace FacebookWizzard.Form
 {
@@ -20,7 +21,7 @@ namespace FacebookWizzard.Form
         {
             InitializeComponent();
             //LoadUrls("facebook.com,google.com".Split(',').ToList());
-            txtToken.Text = "EAAAAUaZA8jlABAGCadZCxOa4BTmgznhLDfqnvFCZCsaHtXsmH1yy4xQiMktZCJzBepdeBQIJCzyEwCuVHg0nIhW7bZBaIBa7IaZA3p73bN8Y7XBeDz2BO4gid9qsfle7hqDZBtKSaiDefT40VZCbCZByalqBW2SSaOC2CfhSCfWgz2S89Kzrx51tv";
+            txtToken.Text = "EAAAAUaZA8jlABACz0BZAmq6rc60lawE9mG0W6JV4cYWWy8HBpBp2C0QQRyQb8VXVjmWs5CKYrXwfBbqLm0Frg8mDZB5aOez3pq9nMD9cNMPlIIMgXlcfFG9DuYPSc4VIxmhpBhkeZBPVxpuZAxlA6xBCgwQOaigsWofqJ4gH9RwZDZD";
             LoadComboChucNang();
             InitEvents();
         }
@@ -43,7 +44,6 @@ namespace FacebookWizzard.Form
                             request = "https://graph.facebook.com/v3.3/me/groups?access_token=" + Token;
                             Result = fc.Get(request).ToString();
                             Response_JoinedGroups response = JsonConvert.DeserializeObject<Response_JoinedGroups>(Result.ToString());
-
                             break;
                         case 1:
                             request = "https://graph.facebook.com/v3.3/me/posts?access_token=" + Token;
@@ -53,7 +53,7 @@ namespace FacebookWizzard.Form
                         case 2:
                             request = "https://graph.facebook.com/v3.3/me/feed?access_token=" + Token;
                             Result = fc.Get(request).ToString();
-                            Response_Posts response_Posts1 = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
+                            Response_Posts response_Feed = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
                             break;
 
                     }
@@ -111,8 +111,8 @@ namespace FacebookWizzard.Form
         }
         bool LikePost(string PostID)
         {
-            var request = "https://graph.facebook.com/"+PostID+"/likes?access_token="+Token+"&method=POST";
-            var request = (HttpWebRequest)WebRequest.Create(url);
+            var req = "https://graph.facebook.com/"+PostID+"/likes?access_token="+Token+"&method=POST";
+            var request = (HttpWebRequest)WebRequest.Create(req);
             request.GetResponse();
             return false;
         }
