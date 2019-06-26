@@ -1,6 +1,6 @@
 ﻿namespace FacebookWizzard.UserControl
 {
-    partial class frmSignleResult
+    partial class frmSingleResult
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,18 @@
         private void InitializeComponent()
         {
             this.pnTop = new System.Windows.Forms.Panel();
-            this.pnFill = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblSubject = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnFill = new System.Windows.Forms.Panel();
+            this.btnLikeAll = new DevExpress.XtraEditors.SimpleButton();
+            this.btnReload = new DevExpress.XtraEditors.SimpleButton();
             this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.btnReload);
+            this.pnTop.Controls.Add(this.btnLikeAll);
             this.pnTop.Controls.Add(this.lblSubject);
             this.pnTop.Controls.Add(this.label1);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -44,23 +48,6 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1174, 49);
             this.pnTop.TabIndex = 0;
-            // 
-            // pnFill
-            // 
-            this.pnFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnFill.Location = new System.Drawing.Point(0, 49);
-            this.pnFill.Name = "pnFill";
-            this.pnFill.Size = new System.Drawing.Size(1174, 624);
-            this.pnFill.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kết quả trả về: ";
             // 
             // lblSubject
             // 
@@ -71,6 +58,41 @@
             this.lblSubject.Size = new System.Drawing.Size(52, 18);
             this.lblSubject.TabIndex = 1;
             this.lblSubject.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kết quả trả về: ";
+            // 
+            // pnFill
+            // 
+            this.pnFill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnFill.Location = new System.Drawing.Point(0, 49);
+            this.pnFill.Name = "pnFill";
+            this.pnFill.Size = new System.Drawing.Size(1174, 624);
+            this.pnFill.TabIndex = 1;
+            // 
+            // btnLikeAll
+            // 
+            this.btnLikeAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLikeAll.Location = new System.Drawing.Point(1011, 14);
+            this.btnLikeAll.Name = "btnLikeAll";
+            this.btnLikeAll.Size = new System.Drawing.Size(151, 23);
+            this.btnLikeAll.TabIndex = 2;
+            this.btnLikeAll.Text = "Thích tất cả các comment";
+            // 
+            // btnReload
+            // 
+            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReload.Location = new System.Drawing.Point(921, 14);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(75, 23);
+            this.btnReload.TabIndex = 3;
+            this.btnReload.Text = "Load lại trang";
             // 
             // frmSignleResult
             // 
@@ -94,5 +116,7 @@
         private System.Windows.Forms.Panel pnFill;
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton btnReload;
+        private DevExpress.XtraEditors.SimpleButton btnLikeAll;
     }
 }

@@ -97,17 +97,29 @@
     <Compile Include="UserControl\ctrEmbedBrowser.Designer.cs">
       <DependentUpon>ctrEmbedBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\frmSignleResult.cs">
+    <Compile Include="UserControl\frmSingleResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControl\frmSignleResult.Designer.cs">
-      <DependentUpon>frmSignleResult.cs</DependentUpon>
+    <Compile Include="UserControl\frmSingleResult.Designer.cs">
+      <DependentUpon>frmSingleResult.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\usDSBanBe_Input.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControl\usDSBanBe_Input.Designer.cs">
       <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\usGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\usGroup.Designer.cs">
+      <DependentUpon>usGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\usFeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\usFeed.Designer.cs">
+      <DependentUpon>usFeed.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\usPost.cs">
       <SubType>Form</SubType>
@@ -133,11 +145,17 @@
     <EmbeddedResource Include="UserControl\ctrEmbedBrowser.resx">
       <DependentUpon>ctrEmbedBrowser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\frmSignleResult.resx">
-      <DependentUpon>frmSignleResult.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\frmSingleResult.resx">
+      <DependentUpon>frmSingleResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\usDSBanBe_Input.resx">
       <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\usGroup.resx">
+      <DependentUpon>usGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\usFeed.resx">
+      <DependentUpon>usFeed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\usPost.resx">
       <DependentUpon>usPost.cs</DependentUpon>

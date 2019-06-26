@@ -10,11 +10,13 @@ namespace FacebookWizzard.JSONResponse
     {
         public pagingClass paging { get; set; }
         public List<dataClass> data { get; set; }
+       
     }
     public class dataClass
     {
         public string name { get; set; }
         public string id { get; set; }
+        public string privacy { get; set; }
     }
     public class pagingClass
     {

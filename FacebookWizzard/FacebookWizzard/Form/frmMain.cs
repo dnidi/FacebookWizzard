@@ -10,18 +10,32 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using FacebookWizzard.JSONResponse;
 using System.Net;
+using FacebookWizzard.Util;
 
 namespace FacebookWizzard.Form
 {
     public partial class frmMain : System.Windows.Forms.Form
     {
-        public string Token { get { return txtToken.Text; } set { txtToken.Text = value; } }
+        public string Token
+        {
+            get {
+                Common.Token = txtToken.Text;
+                return txtToken.Text;
+               
+            }
+            set
+            {
+                txtToken.Text = value;
+                
+            }
+        }
         public string Errors { get; set; }
         public frmMain()
         {
             InitializeComponent();
+            
             //LoadUrls("facebook.com,google.com".Split(',').ToList());
-            txtToken.Text = "EAAAAUaZA8jlABACz0BZAmq6rc60lawE9mG0W6JV4cYWWy8HBpBp2C0QQRyQb8VXVjmWs5CKYrXwfBbqLm0Frg8mDZB5aOez3pq9nMD9cNMPlIIMgXlcfFG9DuYPSc4VIxmhpBhkeZBPVxpuZAxlA6xBCgwQOaigsWofqJ4gH9RwZDZD";
+            txtToken.Text = "EAAAAUaZA8jlABAJBWTeZBffGN25J9UIkseOVnuZAoxtHUbwdfDlPZApiEqCmcMWYUGdUs1ZAwt1W7sp4OOZBRZAD6NAFVOZClxFL09M98tvb6NNwqBeO0vWn80nLyJ1zjeYwlIAi2npDZA0AnxQ2VStumXVBRsOaMy10uuK1Ff7RMGuZAPaKXFZATjP";
             LoadComboChucNang();
             InitEvents();
         }
@@ -30,6 +44,7 @@ namespace FacebookWizzard.Form
         {
             cbChucNang.SelectedIndexChanged += (o, e) =>
             {
+                lblError.Visible = false;
                 try
                 {
                     int index = cbChucNang.SelectedIndex;
@@ -40,26 +55,52 @@ namespace FacebookWizzard.Form
                     switch (index)
                     {
                         case 0:
-
                             request = "https://graph.facebook.com/v3.3/me/groups?access_token=" + Token;
                             Result = fc.Get(request).ToString();
                             Response_JoinedGroups response = JsonConvert.DeserializeObject<Response_JoinedGroups>(Result.ToString());
+                            if (response != null)
+                            {
+                                usGroup usGroup = new usGroup(response);
+                                usGroup.TopLevel = false;
+                                usGroup.Dock = DockStyle.Fill;
+                                pnFill.Controls.Add(usGroup);
+                                usGroup.BringToFront();
+                                usGroup.Show();
+                            }
                             break;
                         case 1:
                             request = "https://graph.facebook.com/v3.3/me/posts?access_token=" + Token;
                             Result = fc.Get(request).ToString();
                             Response_Posts response_Posts = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
+                            if (response_Posts != null)
+                            {
+                                usPost usPosts = new usPost(response_Posts);
+                                usPosts.TopLevel = false;
+                                usPosts.Dock = DockStyle.Fill;
+                                pnFill.Controls.Add(usPosts);
+                                usPosts.Show();
+                            }
                             break;
                         case 2:
                             request = "https://graph.facebook.com/v3.3/me/feed?access_token=" + Token;
                             Result = fc.Get(request).ToString();
                             Response_Posts response_Feed = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
+                            if (response_Feed != null)
+                            {
+                                usFeed usFeeds = new usFeed(response_Feed);
+                                usFeeds.TopLevel = false;
+                                usFeeds.Dock = DockStyle.Fill;
+                                pnFill.Controls.Add(usFeeds);
+                                usFeeds.Show();
+                            }
                             break;
 
                     }
                 }
                 catch (Exception ex)
                 {
+                    lblError.Visible = true;
+                    lblError.Text = ex.Message;
                 }
 
             };
@@ -74,44 +115,29 @@ namespace FacebookWizzard.Form
 
                 }
             };
-            gridView.DoubleClick += (o, e) =>
-            {
-                DXMouseEventArgs ea = e as DXMouseEventArgs;
-                GridView view = o as GridView;
-                GridHitInfo info = view.CalcHitInfo(ea.Location);
-                if (info.InRow || info.InRowCell)
-                {
-                    try
-                    {
+            //gridView.DoubleClick += (o, e) =>
+            //{
+            //    DXMouseEventArgs ea = e as DXMouseEventArgs;
+            //    GridView view = o as GridView;
+            //    GridHitInfo info = view.CalcHitInfo(ea.Location);
+            //    if (info.InRow || info.InRowCell)
+            //    {
+            //        try
+            //        {
 
-                    }
-                    catch (Exception ex)
-                    {
 
-                    }
-                }
-            };
+            //        }
+            //        catch (Exception ex)
+            //        {
+
+            //        }
+            //    }
+            //};
         }
         //====================Methods==================
-        object getPostDetailbyID(string PostID)
-        {
-            //https://graph.facebook.com/1235717999927120_683642118468047?access_token=EAAAAUaZA8jlABAJT8xsqXYJa8FuqbEb1naUc9RneevF4UdBO3M78Ufe4845rbYMJ2FIwoVMFAyj7LP1hl6ooDNrOOpOYetX90IrsYDeSCbJrpSKNKT5vpPj22jxQ2QVWZA8zR3xmNooEZAuzWD01i5RQKbwWypXKxRLrFUqrgZDZD
-            try
-            {
-
-                FacebookClient fc = new FacebookClient(Token);
-                var request = "https://graph.facebook.com/" + PostID + "?access_token=" + Token;
-                var Result = fc.Get(request).ToString();
-            }
-            catch (Exception ex)
-            {
-                Errors = ex.Message;
-            }
-            return null;
-        }
         bool LikePost(string PostID)
         {
-            var req = "https://graph.facebook.com/"+PostID+"/likes?access_token="+Token+"&method=POST";
+            var req = "https://graph.facebook.com/" + PostID + "/likes?access_token=" + Token + "&method=POST";
             var request = (HttpWebRequest)WebRequest.Create(req);
             request.GetResponse();
             return false;

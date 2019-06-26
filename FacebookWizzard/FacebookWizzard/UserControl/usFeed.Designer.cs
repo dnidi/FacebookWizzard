@@ -1,6 +1,6 @@
 ﻿namespace FacebookWizzard.UserControl
 {
-    partial class usPost
+    partial class usFeed
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 551;
+            this.gridColumn1.Width = 624;
             // 
             // gridColumn2
             // 
@@ -110,7 +110,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 558;
+            this.gridColumn2.Width = 630;
             // 
             // gridColumn3
             // 
@@ -121,12 +121,12 @@
             this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn3.Caption = "Created time";
-            this.gridColumn3.FieldName = "CreateTime";
+            this.gridColumn3.FieldName = "created_time";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.FixedWidth = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 150;
+            this.gridColumn3.Width = 120;
             // 
             // pnBottom
             // 
@@ -136,16 +136,15 @@
             this.pnBottom.Size = new System.Drawing.Size(1251, 43);
             this.pnBottom.TabIndex = 1;
             // 
-            // usPost
+            // usFeed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 592);
             this.Controls.Add(this.pnFill);
             this.Controls.Add(this.pnBottom);
-            this.Name = "usPost";
+            this.Name = "usFeed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "usPost";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pnFill)).EndInit();
             this.pnFill.ResumeLayout(false);

@@ -12,7 +12,6 @@ E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\Facebook.xml
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.csproj.CopyComplete
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.exe
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.pdb
-E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.frmSignleResult.resources
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usDSBanBe_Input.resources
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\DevExpress.Data.v18.1.dll
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\DevExpress.Printing.v18.1.Core.dll
@@ -96,3 +95,6 @@ E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\ja\DevExpres
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.exe.licenses
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usPost.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usGroup.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usFeed.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.frmSingleResult.resources

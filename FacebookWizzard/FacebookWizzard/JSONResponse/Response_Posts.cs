@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FacebookWizzard.JSONResponse
 {
-   public class Response_Posts
+    public class Response_Posts
     {
         public pagingResponse_Posts paging { get; set; }
         public List<dataResponse_Posts> data { get; set; }
@@ -17,6 +17,20 @@ namespace FacebookWizzard.JSONResponse
         public string story { get; set; }
 
         public string created_time { get; set; }
+        //public DateTime CreateTime
+        //{
+        //    get
+        //    {
+        //        System.Globalization.DateTimeFormatInfo df = new System.Globalization.DateTimeFormatInfo
+        //        {
+        //            ShortDatePattern = "yyyy-MM-dd HH:mm:ss"
+        //        };
+        //        if (!string.IsNullOrEmpty(created_time))
+        //            return Convert.ToDateTime(created_time, df);
+        //        else
+        //            return DateTime.MinValue;
+        //    }
+        //}
         public string id { get; set; }
     }
     public class pagingResponse_Posts

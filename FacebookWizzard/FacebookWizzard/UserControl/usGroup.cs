@@ -12,21 +12,20 @@ using FacebookWizzard.JSONResponse;
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using FacebookWizzard.Util;
 
 namespace FacebookWizzard.UserControl
 {
-    public partial class usPost : DevExpress.XtraEditors.XtraForm
+    public partial class usGroup : DevExpress.XtraEditors.XtraForm
     {
-
-        //public List<ListBoxItem> Source { get { return MainGrid.DataSource as List<ListBoxItem>; } set { MainGrid.DataSource = value; MainGrid.RefreshDataSource(); } }=
-        public usPost(Response_Posts data)
+       
+        //public List<ListBoxItem> Source { get { return MainGrid.DataSource as List<ListBoxItem>; } set { MainGrid.DataSource = value; MainGrid.RefreshDataSource(); } }
+        public usGroup(Response_JoinedGroups data)
         {
             InitializeComponent();
-            InitEvents();
             LoadData(data);
+            InitEvents();
         }
-        void LoadData(Response_Posts data)
+        void LoadData(Response_JoinedGroups data)
         {
             try
             {
@@ -51,15 +50,10 @@ namespace FacebookWizzard.UserControl
                 {
                     try
                     {
-                        var row = gridView.GetFocusedRow() as dataResponse_Posts;
+                        var row = gridView.GetFocusedRow() as dataClass;
                         if (row != null)
                         {
-                            var data = Common.getPostDetailbyID(row.id);
-                            if(data != null)
-                            {
-                                frmSingleResult frm = new frmSingleResult(data);
-                                frm.ShowDialog();
-                            }
+
                         }
                     }
                     catch (Exception ex)

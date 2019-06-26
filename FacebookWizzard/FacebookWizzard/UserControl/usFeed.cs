@@ -16,15 +16,15 @@ using FacebookWizzard.Util;
 
 namespace FacebookWizzard.UserControl
 {
-    public partial class usPost : DevExpress.XtraEditors.XtraForm
+    public partial class usFeed : DevExpress.XtraEditors.XtraForm
     {
 
-        //public List<ListBoxItem> Source { get { return MainGrid.DataSource as List<ListBoxItem>; } set { MainGrid.DataSource = value; MainGrid.RefreshDataSource(); } }=
-        public usPost(Response_Posts data)
+        //public List<ListBoxItem> Source { get { return MainGrid.DataSource as List<ListBoxItem>; } set { MainGrid.DataSource = value; MainGrid.RefreshDataSource(); } }
+        public usFeed(Response_Posts data)
         {
             InitializeComponent();
-            InitEvents();
             LoadData(data);
+            InitEvents();
         }
         void LoadData(Response_Posts data)
         {
@@ -35,7 +35,8 @@ namespace FacebookWizzard.UserControl
                     MainGrid.DataSource = data.data;
                     MainGrid.RefreshDataSource();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
 
             }
@@ -55,12 +56,13 @@ namespace FacebookWizzard.UserControl
                         if (row != null)
                         {
                             var data = Common.getPostDetailbyID(row.id);
-                            if(data != null)
+                            if (data != null)
                             {
                                 frmSingleResult frm = new frmSingleResult(data);
                                 frm.ShowDialog();
                             }
                         }
+
                     }
                     catch (Exception ex)
                     {
