@@ -145,7 +145,6 @@
             this.Controls.Add(this.pnBottom);
             this.Name = "usPost";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "usPost";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pnFill)).EndInit();
             this.pnFill.ResumeLayout(false);

@@ -34,9 +34,8 @@ namespace FacebookWizzard.UserControl
                   try
                   {
                       var spl = dataTMP.id.Split('_');
-                      browser = new ChromiumWebBrowser(@"https://www.facebook.com/" + spl[0] + "/posts/" + spl[1]);
-                      browser.Load(browser.Address);
-                      browser.Refresh();
+                      browser.Load(@"https://www.facebook.com/" + spl[0] + "/posts/" + spl[1]);
+                     
                   }
                   catch (Exception ex)
                   {

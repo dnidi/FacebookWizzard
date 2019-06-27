@@ -35,7 +35,7 @@ namespace FacebookWizzard.Form
             InitializeComponent();
             
             //LoadUrls("facebook.com,google.com".Split(',').ToList());
-            txtToken.Text = "EAAAAUaZA8jlABAOusiaiWIKVrSWj7DZBhCbZCNUB02Mf77wZBcSJsFzmr2XbGT9UttVV10pvGZAdeXypAXm5xmvqdg5gdnYyZA20eUqBzfkC3YU0RCNIob3hpZBKQMh93SEeSWCqCEpMSnaa9txTOmIZCGZAGlU5a9aRh67AnzP7F2fpSYjOdZAdjj";
+            txtToken.Text = "EAAAAUaZA8jlABAFMcdr76F0Tg4MEQYOxdqnZCP86kOdzZC9IJfMM7hoXqHkRMU49TRYth9OtHLzptsktJzb1iuZBYe7GNB1dPzbFZCvP7Dd5jZANY3jQxC9AUAsslSxZB3b85BiZBGokD0SUSgs1PuJnzrXrBjcgGwLn2FHuW1mVeh8S0gIBIkv3";
             LoadComboChucNang();
             InitEvents();
         }
@@ -188,8 +188,8 @@ namespace FacebookWizzard.Form
             {
                 //foreach (string item in urls)
                 {
-                    ctrEmbedBrowser browser = new ctrEmbedBrowser();
-                    browser.LoadUrl("google.com");
+                  //  ctrEmbedBrowser browser = new ctrEmbedBrowser();
+                   // browser.LoadUrl("google.com");
 
                 }
             }

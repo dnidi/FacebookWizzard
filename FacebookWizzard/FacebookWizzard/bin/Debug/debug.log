@@ -1,2 +1,14 @@
 [0626/150857:ERROR:ipc_channel_win.cc(482)] pipe error: 109
 [0626/165646:WARNING:spdy_session.cc(2599)] Received WINDOW_UPDATE for invalid stream 13
+[0627/154904:ERROR:ipc_channel_win.cc(482)] pipe error: 109
+[0627/155202:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 25
+[0627/155202:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 27
+[0627/155226:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0627/155247:ERROR:gpu_video_decode_accelerator.cc(362)] HW video decode not available for profile 12
+[0627/155248:WARNING:quota_manager.cc(1808)] Create directory failed for path
+[0627/155248:WARNING:quota_manager.cc(1808)] Create directory failed for path
+[0627/155249:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 75
+[0627/155254:ERROR:gpu_video_decode_accelerator.cc(362)] HW video decode not available for profile 12
+[0627/155302:ERROR:audio_output_device.cc(369)] IO loop going away before the audio device has been stopped
+[0627/155337:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 55
+[0627/155349:ERROR:ipc_channel_win.cc(217)] pipe error: 109
