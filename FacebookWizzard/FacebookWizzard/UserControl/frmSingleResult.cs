@@ -34,7 +34,7 @@ namespace FacebookWizzard.UserControl
                   try
                   {
                       var spl = dataTMP.id.Split('_');
-                      browser.Load(@"https://www.facebook.com/" + spl[0] + "/posts/" + spl[1]);
+                      browser.Load(dataTMP.link);
                      
                   }
                   catch (Exception ex)

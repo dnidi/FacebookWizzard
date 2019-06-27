@@ -12,3 +12,7 @@
 [0627/155302:ERROR:audio_output_device.cc(369)] IO loop going away before the audio device has been stopped
 [0627/155337:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 55
 [0627/155349:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0627/180644:WARNING:spdy_session.cc(2599)] Received WINDOW_UPDATE for invalid stream 87
+[0627/180701:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 29
+[0627/180704:WARNING:spdy_session.cc(2599)] Received WINDOW_UPDATE for invalid stream 159
+[0627/180734:WARNING:spdy_session.cc(2427)] Received HEADERS for invalid stream 31
