@@ -87,6 +87,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="JSONResponse\Response_PostDetail.cs" />
+    <Compile Include="JSONResponse\Response_Friends.cs" />
     <Compile Include="JSONResponse\Response_Posts.cs" />
     <Compile Include="JSONResponse\Response_JoinedGroups.cs" />
     <Compile Include="Program.cs" />
@@ -108,6 +109,12 @@
     </Compile>
     <Compile Include="UserControl\usDSBanBe_Input.Designer.cs">
       <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\usFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\usFriend.Designer.cs">
+      <DependentUpon>usFriend.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\usGroup.cs">
       <SubType>Form</SubType>
@@ -150,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\usDSBanBe_Input.resx">
       <DependentUpon>usDSBanBe_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\usFriend.resx">
+      <DependentUpon>usFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\usGroup.resx">
       <DependentUpon>usGroup.cs</DependentUpon>

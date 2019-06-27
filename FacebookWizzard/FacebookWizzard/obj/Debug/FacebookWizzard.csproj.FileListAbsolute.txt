@@ -98,3 +98,4 @@ E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizz
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usGroup.resources
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usFeed.resources
 E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.frmSingleResult.resources
+E:\GitHub\FacebookWizzard\FacebookWizzard\FacebookWizzard\obj\Debug\FacebookWizzard.UserControl.usFriend.resources

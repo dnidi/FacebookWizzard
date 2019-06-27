@@ -35,7 +35,7 @@ namespace FacebookWizzard.Form
             InitializeComponent();
             
             //LoadUrls("facebook.com,google.com".Split(',').ToList());
-            txtToken.Text = "EAAAAUaZA8jlABAJBWTeZBffGN25J9UIkseOVnuZAoxtHUbwdfDlPZApiEqCmcMWYUGdUs1ZAwt1W7sp4OOZBRZAD6NAFVOZClxFL09M98tvb6NNwqBeO0vWn80nLyJ1zjeYwlIAi2npDZA0AnxQ2VStumXVBRsOaMy10uuK1Ff7RMGuZAPaKXFZATjP";
+            txtToken.Text = "EAAAAUaZA8jlABAOusiaiWIKVrSWj7DZBhCbZCNUB02Mf77wZBcSJsFzmr2XbGT9UttVV10pvGZAdeXypAXm5xmvqdg5gdnYyZA20eUqBzfkC3YU0RCNIob3hpZBKQMh93SEeSWCqCEpMSnaa9txTOmIZCGZAGlU5a9aRh67AnzP7F2fpSYjOdZAdjj";
             LoadComboChucNang();
             InitEvents();
         }
@@ -47,54 +47,71 @@ namespace FacebookWizzard.Form
                 lblError.Visible = false;
                 try
                 {
-                    int index = cbChucNang.SelectedIndex;
                     object Result = null;
                     FacebookClient fc = new FacebookClient(Token);
                     var request = "";
-
-                    switch (index)
+                    var selected = cbChucNang.SelectedItem as BoxItem;
+                    if(selected!= null)
                     {
-                        case 0:
-                            request = "https://graph.facebook.com/v3.3/me/groups?access_token=" + Token;
-                            Result = fc.Get(request).ToString();
-                            Response_JoinedGroups response = JsonConvert.DeserializeObject<Response_JoinedGroups>(Result.ToString());
-                            if (response != null)
-                            {
-                                usGroup usGroup = new usGroup(response);
-                                usGroup.TopLevel = false;
-                                usGroup.Dock = DockStyle.Fill;
-                                pnFill.Controls.Add(usGroup);
-                                usGroup.BringToFront();
-                                usGroup.Show();
-                            }
-                            break;
-                        case 1:
-                            request = "https://graph.facebook.com/v3.3/me/posts?access_token=" + Token;
-                            Result = fc.Get(request).ToString();
-                            Response_Posts response_Posts = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
-                            if (response_Posts != null)
-                            {
-                                usPost usPosts = new usPost(response_Posts);
-                                usPosts.TopLevel = false;
-                                usPosts.Dock = DockStyle.Fill;
-                                pnFill.Controls.Add(usPosts);
-                                usPosts.Show();
-                            }
-                            break;
-                        case 2:
-                            request = "https://graph.facebook.com/v3.3/me/feed?access_token=" + Token;
-                            Result = fc.Get(request).ToString();
-                            Response_Posts response_Feed = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
-                            if (response_Feed != null)
-                            {
-                                usFeed usFeeds = new usFeed(response_Feed);
-                                usFeeds.TopLevel = false;
-                                usFeeds.Dock = DockStyle.Fill;
-                                pnFill.Controls.Add(usFeeds);
-                                usFeeds.Show();
-                            }
-                            break;
+                        switch (selected.MaChucNang)
+                        {
+                            case 1:
+                                request = "https://graph.facebook.com/v3.3/me/groups?access_token=" + Token;
+                                Result = fc.Get(request).ToString();
+                                Response_JoinedGroups response = JsonConvert.DeserializeObject<Response_JoinedGroups>(Result.ToString());
+                                if (response != null)
+                                {
+                                    usGroup usGroup = new usGroup(response);
+                                    usGroup.TopLevel = false;
+                                    usGroup.Dock = DockStyle.Fill;
+                                    pnFill.Controls.Add(usGroup);
+                                    usGroup.BringToFront();
+                                    usGroup.Show();
+                                }
+                                break;
+                            case 2:
+                                request = "https://graph.facebook.com/v3.3/me/posts?access_token=" + Token;
+                                Result = fc.Get(request).ToString();
+                                Response_Posts response_Posts = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
+                                if (response_Posts != null)
+                                {
+                                    usPost usPosts = new usPost(response_Posts);
+                                    usPosts.TopLevel = false;
+                                    usPosts.Dock = DockStyle.Fill;
+                                    pnFill.Controls.Add(usPosts);
+                                    usPosts.Show();
+                                }
+                                break;
+                            case 3:
+                                request = "https://graph.facebook.com/v3.3/me/feed?access_token=" + Token;
+                                Result = fc.Get(request).ToString();
+                                Response_Posts response_Feed = JsonConvert.DeserializeObject<Response_Posts>(Result.ToString());
+                                if (response_Feed != null)
+                                {
+                                    usFeed usFeeds = new usFeed(response_Feed);
+                                    usFeeds.TopLevel = false;
+                                    usFeeds.Dock = DockStyle.Fill;
+                                    pnFill.Controls.Add(usFeeds);
+                                    usFeeds.Show();
+                                }
+                                break;
+                            case 4:
+                                var client = new FacebookClient(Token);
+                                Result = client.Get("/me/friends").ToString();
 
+                                Response_Friends response_friend = JsonConvert.DeserializeObject<Response_Friends>(Result.ToString());
+                                if (response_friend != null)
+                                {
+                                    usFriend usFriend_ = new usFriend(response_friend);
+                                    usFriend_.TopLevel = false;
+                                    usFriend_.Dock = DockStyle.Fill;
+                                    pnFill.Controls.Add(usFriend_);
+                                    usFriend_.Show();
+                                }
+                                break;
+
+
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -156,7 +173,7 @@ namespace FacebookWizzard.Form
             lstItem.Add(new BoxItem(1, "Lấy danh sách nhóm tham gia"));
             lstItem.Add(new BoxItem(2, "Lấy danh sách post"));
             lstItem.Add(new BoxItem(3, "Lấy danh sách post trên newfeed"));
-            //lstItem.Add(new BoxItem(4, "Đếm like trang"));
+            lstItem.Add(new BoxItem(4, "Danh sách bạn bè"));
             //lstItem.Add(new BoxItem(5, "Gửi tin nhắn theo list id"));
             //lstItem.Add(new BoxItem(6, "Mời thích trang"));
             //lstItem.Add(new BoxItem(7, "Mời tham gia sự kiện"));
