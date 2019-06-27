@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pnFill = new DevExpress.XtraEditors.PanelControl();
-            this.pnBottom = new DevExpress.XtraEditors.PanelControl();
             this.MainGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pnBottom = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnFill)).BeginInit();
             this.pnFill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnBottom)).BeginInit();
             this.SuspendLayout();
             // 
             // pnFill
@@ -49,14 +49,6 @@
             this.pnFill.Name = "pnFill";
             this.pnFill.Size = new System.Drawing.Size(1251, 549);
             this.pnFill.TabIndex = 0;
-            // 
-            // pnBottom
-            // 
-            this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBottom.Location = new System.Drawing.Point(0, 549);
-            this.pnBottom.Name = "pnBottom";
-            this.pnBottom.Size = new System.Drawing.Size(1251, 43);
-            this.pnBottom.TabIndex = 1;
             // 
             // MainGrid
             // 
@@ -118,6 +110,14 @@
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 583;
             // 
+            // pnBottom
+            // 
+            this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBottom.Location = new System.Drawing.Point(0, 549);
+            this.pnBottom.Name = "pnBottom";
+            this.pnBottom.Size = new System.Drawing.Size(1251, 43);
+            this.pnBottom.TabIndex = 1;
+            // 
             // usGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,12 +126,11 @@
             this.Controls.Add(this.pnFill);
             this.Controls.Add(this.pnBottom);
             this.Name = "usGroup";
-            this.Text = "usPost";
             ((System.ComponentModel.ISupportInitialize)(this.pnFill)).EndInit();
             this.pnFill.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnBottom)).EndInit();
             this.ResumeLayout(false);
 
         }

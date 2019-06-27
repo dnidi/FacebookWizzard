@@ -126,7 +126,6 @@
             this.Controls.Add(this.pnFill);
             this.Controls.Add(this.pnBottom);
             this.Name = "usFriend";
-            this.Text = "usPost";
             ((System.ComponentModel.ISupportInitialize)(this.pnFill)).EndInit();
             this.pnFill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MainGrid)).EndInit();
